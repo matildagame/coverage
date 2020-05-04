@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/onda.obj-91d0ffced16f95f1278649091384e349.mesh"
+
+[deps]
+
+files=[ "res://.import/onda.obj-91d0ffced16f95f1278649091384e349.mesh" ]
+
+source_file="res://objetos/onda/onda.obj"
+dest_files=[ "res://.import/onda.obj-91d0ffced16f95f1278649091384e349.mesh", "res://.import/onda.obj-91d0ffced16f95f1278649091384e349.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

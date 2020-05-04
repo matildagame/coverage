@@ -1,0 +1,16 @@
+# Blender MTL File: 'suelo.blend'
+# Material Count: 1
+
+newmtl losa_normal
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\matilda\\Documents\\GodotEngineProjects\\CridnavMesh\\escenarios\\fase1\\materiales\\metal\\metal_plate_Nor_1k.jpg
+map_Kd C:\\Users\\matilda\\Documents\\GodotEngineProjects\\CridnavMesh\\escenarios\\fase1\\materiales\\metal\\metal_plate_diff_1k.jpg
+map_Ns C:\\Users\\matilda\\Documents\\GodotEngineProjects\\CridnavMesh\\escenarios\\fase1\\materiales\\metal\\metal_plate_rough_1k.jpg
+refl C:\\Users\\matilda\\Documents\\GodotEngineProjects\\CridnavMesh\\escenarios\\fase1\\materiales\\metal\\metal_plate_spec_1k.jpg

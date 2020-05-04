@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://objetos/onda/onda.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://objetos/onda/Onda.gd" type="Script" id=2]
+
+[sub_resource type="SphereShape" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+flags_transparent = true
+params_blend_mode = 3
+params_cull_mode = 2
+params_line_width = 10.6
+params_point_size = 0.1
+albedo_color = Color( 1, 0.992157, 0.423529, 1 )
+emission_enabled = true
+emission = Color( 1, 1, 1, 1 )
+emission_energy = 2.2
+emission_operator = 0
+emission_on_uv2 = false
+
+[node name="Onda" type="Area"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 2 )
+tiempo_esperar = 3
+velocidad = 3.0
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="onda" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = SubResource( 2 )
+[connection signal="area_entered" from="." to="." method="_on_Onda_area_entered"]

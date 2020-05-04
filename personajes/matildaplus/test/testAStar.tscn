@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://escenarios/fase1/Navegador.gd" type="Script" id=1]
+[ext_resource path="res://escenarios/fase1/test.meshlib" type="MeshLibrary" id=2]
+[ext_resource path="res://personajes/matildaplus/prefab/MatildaPlus.tscn" type="PackedScene" id=3]
+[ext_resource path="res://gui/Control.tscn" type="PackedScene" id=4]
+[ext_resource path="res://personajes/alien3/prefab/alien3.tscn" type="PackedScene" id=5]
+[ext_resource path="res://gui/Control.gd" type="Script" id=6]
+[ext_resource path="res://objetos/walkie_talkie/WalkieOnda.tscn" type="PackedScene" id=7]
+[ext_resource path="res://personajes/matildaplus/test/testAStar.gd" type="Script" id=8]
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 8 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.532477, 0.846444, 0, -0.846444, 0.532477, -0.810059, 10.1672, 7.87329 )
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource( 2 )
+data = {
+"cells": PoolIntArray( 0, 0, 2, 1, 0, 0, 2, 0, 1, 5, 0, 0, 65531, 0, 1, 65532, 0, 2, 65533, 0, 0, 65534, 0, 2, 65535, 0, 0, 0, 1, 0, 1, 1, 0, 2, 1, 2, 5, 1, 0, 65531, 1, 1, 65532, 1, 1, 65533, 1, 0, 65534, 1, 2, 65535, 1, 0, 0, 2, 2, 1, 2, 0, 2, 2, 2, 5, 2, 0, 65531, 2, 0, 65532, 2, 2, 65533, 2, 0, 65534, 2, 2, 65535, 2, 2, 0, 3, 0, 1, 3, 0, 2, 3, 1, 3, 3, 0, 4, 3, 0, 5, 3, 0, 65531, 3, 0, 65532, 3, 0, 65533, 3, 0, 65534, 3, 0, 65535, 3, 0, 0, 4, 2, 1, 4, 2, 2, 4, 0, 3, 4, 0, 65531, 4, 0, 65532, 4, 2, 65533, 4, 2, 65534, 4, 2, 65535, 4, 2, 0, 65533, 2, 1, 65533, 2, 2, 65533, 2, 5, 65533, 0, 65531, 65533, 2, 65532, 65533, 1, 65533, 65533, 2, 65534, 65533, 2, 65535, 65533, 2, 0, 65534, 0, 1, 65534, 0, 2, 65534, 1, 4, 65534, 0, 5, 65534, 0, 6, 65534, 0, 65531, 65534, 2, 65532, 65534, 1, 65533, 65534, 0, 65534, 65534, 0, 65535, 65534, 0, 0, 65535, 0, 1, 65535, 2, 2, 65535, 1, 5, 65535, 0, 65531, 65535, 1, 65532, 65535, 1, 65533, 65535, 0, 65534, 65535, 2, 65535, 65535, 0 )
+}
+__meta__ = {
+"_editor_clip_": 0
+}
+
+[node name="Navegador" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.19186, 1.09245, 6.49902 )
+script = ExtResource( 1 )
+casillas_suelo = [ 0, 1 ]
+
+[node name="alien3" parent="." instance=ExtResource( 5 )]
+transform = Transform( 5.52921, 0, -4.29276, 0, 7, 0, 4.29276, 0, 5.52921, -1.09033, 1.07994, 2.62146 )
+celeridad = 150
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.0803382, 0.606656, -0.790895, 0, 0.79346, 0.608623, 0.996768, 0.0488957, -0.0637451, 0, 3.02563, 0 )
+shadow_enabled = true
+shadow_color = Color( 0.0313726, 0.0705882, 0.164706, 1 )
+
+[node name="Emisor" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.39349, 1.61664, -2.87725 )
+tipo = 0
+
+[node name="Receptor" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.93451, 2.73925, -4.96839 )
+tipo = 1
+
+[node name="MatildaPlus" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78027, 1.11043, -3.22682 )
+celeridad = 75
+
+[node name="repetidor" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.74269, 2.74828, 9.55767 )
+
+[node name="Gui" parent="." instance=ExtResource( 4 )]
+script = ExtResource( 6 )

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/MatildaPlusBaked.obj-4cf8033c94b57ceb7e0c7512d5f25bb3.mesh"
+
+[deps]
+
+files=[ "res://.import/MatildaPlusBaked.obj-4cf8033c94b57ceb7e0c7512d5f25bb3.mesh" ]
+
+source_file="res://personajes/matildaplus/MatildaPlusBaked.obj"
+dest_files=[ "res://.import/MatildaPlusBaked.obj-4cf8033c94b57ceb7e0c7512d5f25bb3.mesh", "res://.import/MatildaPlusBaked.obj-4cf8033c94b57ceb7e0c7512d5f25bb3.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

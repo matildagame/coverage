@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/losa_plana.obj-286187ad2f65292ab7e3862a8e1be016.mesh"
+
+[deps]
+
+files=[ "res://.import/losa_plana.obj-286187ad2f65292ab7e3862a8e1be016.mesh" ]
+
+source_file="res://escenarios/fase1/modelos/losa_plana.obj"
+dest_files=[ "res://.import/losa_plana.obj-286187ad2f65292ab7e3862a8e1be016.mesh", "res://.import/losa_plana.obj-286187ad2f65292ab7e3862a8e1be016.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
